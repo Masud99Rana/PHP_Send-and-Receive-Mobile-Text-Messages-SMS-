@@ -18,7 +18,5 @@ return $config = [
 
     'account_sid'=> 'ACec1dd46bf4bc841f9c3e0942922d89d5',
     'auth_token' => '264d0dbc1f05f982e28830343b2ad2e7',
-    'phone_number' => '+12134442576'
-
-
+    'phone_number' => '+1 213 444 2576'
 ];
