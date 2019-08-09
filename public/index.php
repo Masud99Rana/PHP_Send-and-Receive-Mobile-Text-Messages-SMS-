@@ -25,11 +25,7 @@
                 );
 
 
-
-
-
                 echo "<h3 class='text-center bg-success'>Message has been sent</h3>";
-
 
            }
 
