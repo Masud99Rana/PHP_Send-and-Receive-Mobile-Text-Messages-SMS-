@@ -13,20 +13,14 @@
             if(isset($_POST['number']) && isset($_POST['message'])){
 
 
-                // $client = new Services_Twilio($config['account_sid'],$config['auth_token']);
-
-                // $client->account->messages->sendMessage($config['phone_number'],$_POST['number'], $_POST['message']);
-
-
-
                 $client = new Client($config['account_sid'], $config['auth_token']);
                 
                 $client->messages->create(
                     // Where to send a text message (your cell phone?)
-                    '+8801885544345',
+                    $_POST["number"],
                     array(
                         'from' => $config['phone_number'],
-                        'body' => 'I sent this message in under 10 minutes!'
+                        'body' => $_POST["message"]
                     )
                 );
 
@@ -38,9 +32,6 @@
 
 
            }
-
-
-
 
     }
 
@@ -55,7 +46,7 @@
 <div class="col-sm-6 col-sm-offset-3">
 
 
-    <form role="form" method="post">
+    <form role="form" method="POST">
         <div class="form-group">
             <label for="email">Phone Number</label>
             <input name="number" type="tel" class="form-control" id="email" required placeholder="Enter number">
